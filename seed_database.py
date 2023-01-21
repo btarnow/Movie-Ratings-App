@@ -64,3 +64,14 @@ for n in range(10):
         model.db.session.add(random_rating)
 
 model.db.session.commit()
+
+
+# Get the first rating from the database --> 
+    # rating = Rating.query.first()
+
+# Make sure you can access the rating’s user and movie attributes
+    # rating.user 
+    # rating.movie 
+
+# Print the scores of all the ratings that rating.user has made
+###last step might be to assign rating to a variable###

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Movies{% endblock %}
+
+{% block body %}
+
+    <h1>All Movies</h1>
+
+    <!-- loop over the list of movies to display the title of each movie as 
+    well as link it to the page that is individually about that movie.-->
+    {% for movie in movies %}
+        <ul>
+            <li>
+                <a href="/movies/{{ movie.movie_id }}">
+                {{ movie.title }}</a>
+            </li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}
