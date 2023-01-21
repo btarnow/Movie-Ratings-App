@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Users{% endblock %}
+
+{% block body %}
+
+    <h1>All Users</h1>
+
+    <!-- loop over the list of users to display the email address of each user as 
+    well as link it to the page that is individually about that user.-->
+    {% for user in users %}
+        <ul>
+            <li>
+                <a href="/users/{{ user.user_id }}">
+                {{ user.email }}</a>
+            </li>
+        </ul>
+    {% endfor %}
+
+{% endblock %}
